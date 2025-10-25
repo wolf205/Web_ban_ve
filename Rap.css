@@ -10,14 +10,14 @@
 }
 
 /* FIX: Các file CSS gốc đặt màu chữ và màu nền đều là SÁNG.
-  Ta ghi đè lại màu chữ body để dùng màu tối (lấy từ --color-secondary)
-  cho dễ đọc, giống như trong ảnh mẫu.
+   Ta ghi đè lại màu chữ body để dùng màu tối (lấy từ --color-secondary)
+   cho dễ đọc, giống như trong ảnh mẫu.
 */
 body {
   color: var(--color-secondary, #141313);
 }
 
-/* Layout 2 cột chính: 2fr (trái) và 1fr (phải) */
+/* Layout 2 cột chính: 1fr (trái) và 1fr (phải) */
 .page-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +125,8 @@ body {
   resize: vertical;
 }
 
+/* ===== CẬP NHẬT PHẦN DANH SÁCH BÌNH LUẬN ===== */
+
 /* Danh sách bình luận */
 .comment-list {
   display: flex;
@@ -132,20 +134,70 @@ body {
   gap: var(--space-lg);
 }
 
+/* SỬA ĐỔI: Dùng Flexbox để chia 2 cột (avatar và nội dung) */
 .comment {
-  border: 1px solid var(--color-muted);
-  border-left: 4px solid var(--color-accent); /* Điểm nhấn màu vàng */
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
+  display: flex;
+  gap: var(--space-sm); /* Khoảng cách giữa avatar và nội dung */
+
+  /* Bỏ các style viền và padding cũ */
+  border: none;
+  border-left: none;
+  padding: 0;
+  border-radius: 0;
 }
 
+/* MỚI: Style cho avatar */
+.comment-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Avatar tròn */
+  background-color: #ccc; /* Màu nền placeholder cho ảnh trống */
+  flex-shrink: 0; /* Ngăn avatar bị co lại */
+}
+
+/* MỚI: "Bong bóng" chứa nội dung bình luận */
+.comment-content {
+  background-color: #f0f2f5; /* Nền xám nhạt */
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  flex-grow: 1; /* Cho phép nội dung lấp đầy không gian */
+}
+
+/* SỬA ĐỔI: Style cho Tên tác giả */
 .comment-author {
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  color: var(--color-primary); /* Màu xanh */
+  margin-bottom: 4px; /* Giảm khoảng cách với nội dung */
+  font-size: var(--font-size-sm); /* Tên tác giả thường nhỏ hơn 1 chút */
 }
 
+/* SỬA ĐỔI: Style cho Nội dung bình luận */
 .comment-body {
-  margin-bottom: 0; /* Ghi đè margin của <p> chung */
+  margin-bottom: var(--space-sm); /* Tạo khoảng cách với hàng 'actions' */
   line-height: 1.6;
+}
+
+/* MỚI: Style cho hàng "Thích · Phản hồi" */
+.comment-actions {
+  font-size: var(--font-size-xs); /* Chữ siêu nhỏ */
+  color: var(--color-muted); /* Màu xám */
+}
+
+.comment-actions a {
+  color: var(--color-primary); /* Màu xanh cho link */
+  font-weight: 600; /* In đậm */
+  text-decoration: none;
+}
+
+.comment-actions a:hover {
+  text-decoration: underline;
+}
+
+/* Dấu chấm ngăn cách */
+.comment-actions span {
+  margin: 0 var(--space-xs);
+}
+
+.comment-time {
+  color: var(--color-muted); /* Màu xám cho thời gian */
 }
