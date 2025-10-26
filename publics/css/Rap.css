@@ -1,7 +1,3 @@
-/* =========================
-   LAYOUT: Trang Rạp (Mới)
-   ========================= */
-
 /* Khối đen thay thế header/footer */
 .fake-header,
 .fake-footer {
@@ -9,10 +5,6 @@
   background-color: #000;
 }
 
-/* FIX: Các file CSS gốc đặt màu chữ và màu nền đều là SÁNG.
-   Ta ghi đè lại màu chữ body để dùng màu tối (lấy từ --color-secondary)
-   cho dễ đọc, giống như trong ảnh mẫu.
-*/
 body {
   color: var(--color-secondary, #141313);
 }
@@ -30,13 +22,13 @@ body {
 
 .cinema-title {
   font-family: var(--font-title);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xxl);
   margin-bottom: var(--space-md);
 }
 
 .cinema-image {
   width: 100%;
-  height: 350px; /* Chiều cao cố định cho ảnh placeholder */
+  height: 450px; /* Chiều cao cố định cho ảnh placeholder */
   background-color: #e0e0e0; /* Màu nền cho ảnh trống */
   border-radius: var(--radius-md);
   margin-bottom: var(--space-md);
@@ -46,36 +38,6 @@ body {
 .cinema-info p {
   margin-bottom: var(--space-md);
   line-height: 1.7; /* Tăng độ dãn dòng cho dễ đọc */
-}
-
-/* =========================
-   CỘT PHẢI: Phim hot
-   ========================= */
-
-.card {
-  width: 85%;
-}
-
-/* Lưới 2 cột cho các thẻ phim */
-.movie-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: var(--space-xl);
-  column-gap: var(--space-sm); /* SỬA: Đã sửa lỗi cú pháp */
-}
-
-/* MỚI: Định nghĩa style cho tiêu đề phim (vì nó không còn trong card.css) */
-.movie-title {
-  font-family: var(--font-title);
-  font-size: var(--font-size-lg);
-  margin-top: var(--space-sm);
-  color: var(--color-accent);
-  text-align: center;
-}
-
-/* Thêm style cho ảnh placeholder của card (đã có height từ card.css) */
-.card img[src=""] {
-  background-color: #333; /* Màu nền tối cho ảnh phim trống */
 }
 
 /* =========================
@@ -155,15 +117,14 @@ body {
   flex-shrink: 0; /* Ngăn avatar bị co lại */
 }
 
-/* MỚI: "Bong bóng" chứa nội dung bình luận */
 .comment-content {
-  background-color: #f0f2f5; /* Nền xám nhạt */
+  background-color: #f0f2f5;
   border-radius: var(--radius-md);
   padding: var(--space-sm) var(--space-md);
-  flex-grow: 1; /* Cho phép nội dung lấp đầy không gian */
+  flex-grow: 1;
 }
 
-/* SỬA ĐỔI: Style cho Tên tác giả */
+/*Style cho Tên tác giả */
 .comment-author {
   font-weight: 600;
   color: var(--color-primary); /* Màu xanh */
@@ -200,4 +161,29 @@ body {
 
 .comment-time {
   color: var(--color-muted); /* Màu xám cho thời gian */
+}
+
+/* =========================
+   CỘT PHẢI: Phim hot
+   ========================= */
+
+.card {
+  width: 85%;
+  position: relative;
+}
+
+/* Lưới 2 cột cho các thẻ phim */
+.movie-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: var(--space-xl);
+  column-gap: var(--space-sm);
+}
+
+.movie-title {
+  font-family: var(--font-title);
+  font-size: var(--font-size-lg);
+  margin-top: var(--space-sm);
+  color: var(--color-accent);
+  text-align: center;
 }

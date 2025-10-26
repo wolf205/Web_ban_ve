@@ -104,19 +104,6 @@ body {
   /* Chiều cao 350px được kế thừa từ lớp .card trong card.css */
 }
 
-/* --- Nhãn phân loại độ tuổi (T13, T16) --- */
-.movie-tag {
-  position: absolute; /* Định vị tuyệt đối bên trong .movie-poster-card */
-  top: var(--space-md); /* Cách lề trên */
-  left: var(--space-md); /* Cách lề trái */
-  background-color: var(--color-primary); /* Nền đỏ */
-  color: #fff; /* Chữ trắng */
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-}
-
 /* --- 2. Phần thông tin chi tiết (Khối bên phải) --- */
 .movie-info-details {
   flex-grow: 1; /* Tự động lấp đầy không gian còn lại bên phải */
