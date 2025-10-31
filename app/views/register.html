@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lịch Chiếu Phim</title>
+    <title>Đăng ký tài khoản</title>
 
-    <link rel="stylesheet" href="../../publics/css/reset.css" />
     <link rel="stylesheet" href="../../publics/css/variables.css" />
+    <link rel="stylesheet" href="../../publics/css/reset.css" />
     <link rel="stylesheet" href="../../publics/css/container.css" />
     <link rel="stylesheet" href="../../publics/css/button.css" />
-    <link rel="stylesheet" href="../../publics/css/card.css" />
-    <link rel="stylesheet" href="../../publics/css/LichChieu.css" />
+
+    <link rel="stylesheet" href="../../publics/css/taikhoan.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -96,7 +96,7 @@
 
           <a href="./LichChieu.html" class="nav-link">Lịch Chiếu Theo Rạp</a>
           <a href="./Rap.html" class="nav-link">Rạp</a>
-          <a href="./login.html" class="nav-link">Tài Khoản</a>
+          <a href="#tai-khoan" class="nav-link">Tài Khoản</a>
         </nav>
 
         <div class="header-actions">
@@ -108,152 +108,83 @@
       </div>
     </header>
 
-    <main>
-      <div class="container">
-        <section class="date-selector section">
-          <a href="#" class="date-item active">25/10 - T7</a>
-          <a href="#" class="date-item">26/10 - CN</a>
-          <a href="#" class="date-item">27/10 - T2</a>
-          <a href="#" class="date-item">28/10 - T3</a>
-          <a href="#" class="date-item">29/10 - T4</a>
-          <a href="#" class="date-item">30/10 - T5</a>
-        </section>
+    <main class="container login-section">
+      <div class="login-card">
+        <div class="login-tabs">
+          <a href="login.html" class="tab-item">Đăng nhập</a>
+          <a href="register.html" class="tab-item active">Đăng ký</a>
+        </div>
 
-        <section class="movie-grid">
-          <article class="movie-listing">
-            <div class="movie-poster-card card">
-              <img
-                src="../../publics/img/cuc_vang_cua_ngoai.jpg"
-                alt="Movie Poster"
+        <form class="login-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="fullname">Họ tên</label>
+            <div class="input-with-icon">
+              <input
+                type="text"
+                id="fullname"
+                name="fullname"
+                placeholder="Họ tên"
+                required
               />
-              <span class="movie-tag">T13</span>
             </div>
+          </div>
 
-            <div class="movie-info-details">
-              <h3 class="movie-title">Cục Vàng Của Ngoại</h3>
-              <p class="movie-details">Tâm lý, Gia đình | 119 phút</p>
-
-              <div class="showtimes">
-                <h4>2D PHỤ ĐỀ</h4>
-                <div class="showtimes-grid">
-                  <a href="#" class="showtime-slot">
-                    <span class="time">11:20</span>
-                    <span class="seats">136 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">14:10</span>
-                    <span class="seats">164 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">16:10</span>
-                    <span class="seats">118 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">18:10</span>
-                    <span class="seats">164 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">20:15</span>
-                    <span class="seats">170 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">22:20</span>
-                    <span class="seats">170 ghế trống</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="movie-listing">
-            <div class="movie-poster-card card">
-              <img src="../../publics/img/Nha_ma_xo.png" alt="Movie Poster" />
-              <span class="movie-tag">T16</span>
-            </div>
-
-            <div class="movie-info-details">
-              <h3 class="movie-title">Nhà Ma Xó</h3>
-              <p class="movie-details">Kinh dị, Gia đình | 108 phút</p>
-
-              <div class="showtimes">
-                <h4>2D PHỤ ĐỀ</h4>
-                <div class="showtimes-grid">
-                  <a href="#" class="showtime-slot">
-                    <span class="time">13:30</span>
-                    <span class="seats">136 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">15:30</span>
-                    <span class="seats">136 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">21:00</span>
-                    <span class="seats">134 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">23:00</span>
-                    <span class="seats">130 ghế trống</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="movie-listing">
-            <div class="movie-poster-card card">
-              <img
-                src="../../publics/img/kinh_di_nhat_vi.jpg"
-                alt="Movie Poster"
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-with-icon">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
               />
-              <span class="movie-tag">T16</span>
             </div>
+          </div>
 
-            <div class="movie-info-details">
-              <h3 class="movie-title">Kinh Dị Nhật Vị</h3>
-              <p class="movie-details">Kinh dị | 80 phút</p>
-
-              <div class="showtimes">
-                <h4>2D PHỤ ĐỀ</h4>
-                <div class="showtimes-grid">
-                  <a href="#" class="showtime-slot">
-                    <span class="time">10:45</span>
-                    <span class="seats">170 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">17:40</span>
-                    <span class="seats">136 ghế trống</span>
-                  </a>
-                </div>
-              </div>
+          <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <div class="input-with-icon">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Số điện thoại"
+                required
+              />
             </div>
-          </article>
+          </div>
 
-          <article class="movie-listing">
-            <div class="movie-poster-card card">
-              <img src="../../publics/img/quy_an_tang.jpg" alt="Movie Poster" />
-              <span class="movie-tag">T18</span>
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <div class="input-with-icon">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Mật khẩu"
+                required
+              />
             </div>
+          </div>
 
-            <div class="movie-info-details">
-              <h3 class="movie-title">Quỷ Ăn Tạng Phần 3</h3>
-              <p class="movie-details">Hành động | 120 phút</p>
-
-              <div class="showtimes">
-                <h4>2D PHỤ ĐỀ</h4>
-                <div class="showtimes-grid">
-                  <a href="#" class="showtime-slot">
-                    <span class="time">12:00</span>
-                    <span class="seats">150 ghế trống</span>
-                  </a>
-                  <a href="#" class="showtime-slot">
-                    <span class="time">14:30</span>
-                    <span class="seats">150 ghế trống</span>
-                  </a>
-                </div>
-              </div>
+          <div class="form-group">
+            <label for="password_confirm">Xác nhận lại mật khẩu</label>
+            <div class="input-with-icon">
+              <input
+                type="password"
+                id="password_confirm"
+                name="password_confirm"
+                placeholder="Xác nhận lại mật khẩu"
+                required
+              />
             </div>
-          </article>
-        </section>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-login">
+            Đăng ký
+          </button>
+        </form>
       </div>
     </main>
 

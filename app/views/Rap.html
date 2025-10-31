@@ -11,9 +11,101 @@
     <link rel="stylesheet" href="../../publics/css/button.css" />
     <link rel="stylesheet" href="../../publics/css/card.css" />
     <link rel="stylesheet" href="../../publics/css/Rap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../publics/css/styles.css" />
   </head>
   <body>
-    <header class="fake-header"></header>
+    <!-- HEADER -->
+    <header>
+      <div class="top-bar">
+        <div class="top-bar-content">
+          <div class="contact-info">
+            <span><i class="fas fa-phone"></i> Hotline: 1900 1234</span>
+            <span><i class="fas fa-envelope"></i> support@cinemaplus.vn</span>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-header">
+        <div class="logo">
+          <i class="fas fa-film"></i>
+          CINEMA PLUS
+        </div>
+
+        <div class="cinema-filter">
+          <button class="filter-btn" id="filterBtn">
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="selectedCity">Beta Thái Nguyên</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="filter-dropdown" id="filterDropdown">
+            <div class="filter-item" data-city="Hà Nội">
+              Hà Nội
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="TP Hồ Chí Minh">
+              TP Hồ Chí Minh
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="An Giang">
+              An Giang
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Đồng Nai">
+              Đồng Nai
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Khánh Hòa">
+              Khánh Hòa
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item active" data-city="Thái Nguyên">
+              Thái Nguyên
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Thanh Hóa">
+              Thanh Hóa
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Bắc Ninh">
+              Bắc Ninh
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Lào Cai">
+              Lào Cai
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="filter-item" data-city="Phú Thọ">
+              Phú Thọ
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#phim" class="nav-link active">Phim</a>
+          <a href="./LichChieu.html" class="nav-link">Lịch Chiếu Theo Rạp</a>
+          <a href="./Rap.html" class="nav-link">Rạp</a>
+          <a href="./login.html" class="nav-link">Tài Khoản</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#login" class="btn-login">
+            <i class="fas fa-user"></i>
+            Đăng Nhập
+          </a>
+        </div>
+      </div>
+    </header>
 
     <main class="container">
       <div class="page-layout">
@@ -150,6 +242,107 @@
       </div>
     </main>
 
-    <footer class="fake-footer"></footer>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section footer-about">
+          <h3>Cinema Plus</h3>
+          <p>
+            Hệ thống rạp chiếu phim hiện đại, mang đến trải nghiệm điện ảnh đỉnh
+            cao với công nghệ âm thanh và hình ảnh tốt nhất.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section footer-links">
+          <h3>Liên Kết</h3>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Phim Đang Chiếu</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Phim Sắp Chiếu</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Khuyến Mãi</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Tin Tức</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Về Chúng Tôi</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-links">
+          <h3>Chính Sách</h3>
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Điều Khoản Sử Dụng</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Chính Sách Bảo Mật</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Quy Định Chung</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Hướng Dẫn Đặt Vé</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Câu Hỏi Thường Gặp</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section footer-contact">
+          <h3>Liên Hệ</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận XYZ, TP.
+            Hà Nội
+          </p>
+          <p><i class="fas fa-phone"></i> Hotline: 1900 1234</p>
+          <p><i class="fas fa-envelope"></i> support@cinemaplus.vn</p>
+          <p><i class="fas fa-clock"></i> 8:00 - 22:00 (Tất cả các ngày)</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            © 2024 Cinema Plus. All Rights Reserved. Designed with
+            <i class="fas fa-heart" style="color: #e50914"></i>
+          </div>
+          <div class="payment-methods">
+            <span>Phương thức thanh toán:</span>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
